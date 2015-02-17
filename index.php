@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <?php
-	$hdhomerun = '192.168.0.70';
+	session_start();
+
+	require_once('init.php');
+
+	$deviceIP = $_SESSION['deviceIP'];
+	$deviceID = $_SESSION['deviceID'];
 ?>
 <html>
 <head>
@@ -32,10 +37,10 @@
 
 <div class="hdhomerun-menu">
 	<ul>
-		<li>HDHomeRun <span>ID: 1050BEFA</span></li>
-		<li><?php echo $hdhomerun ?><a href="http://<?php echo $hdhomerun ?>" target="_blank"><span>Manage</span></a></li>
+		<li>HDHomeRun <span>ID: <?php echo $deviceID ?></span></li>
+		<li><?php echo $deviceIP ?><a href="http://<?php echo $deviceIP ?>" target="_blank"><span>Manage</span></a></li>
 		<li id="refresh-tuner">Refresh Tuner Status</li>
-		<li>Restart HDHomeRun...</li>
+		<!--<li>Restart HDHomeRun...</li>-->
 	</ul>
 </div>
 
@@ -304,7 +309,7 @@ $(document).ready(function() {
 	function tunerStatus(tuner) {
 		$.ajax({
 	        type: "POST",
-	        url: "../10fl/devices/tunerStatus.php",
+	        url: "tunerStatus.php",
 	        data: {
 	            'tuner': tuner
 	        },

@@ -1,11 +1,15 @@
 <?php
+session_start();
+
+$deviceID = $_SESSION['deviceID'];
+$deviceIP = $_SESSION['deviceIP'];
+
 
 if (isset($_POST['tuner'])) {
 
 	$tuner = $_POST['tuner'];
-	$hdhrID = '1050BEFA';
 
-	$format = 'hdhomerun_config '.$hdhrID.' get /tuner'.$tuner.'/streaminfo';
+	$format = 'hdhomerun_config '.$deviceID.' get /tuner'.$tuner.'/streaminfo';
 	$command = escapeshellcmd($format);
 	$output = trim(shell_exec($command));
 
