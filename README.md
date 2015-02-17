@@ -11,7 +11,7 @@ View live OTA tv via HDHomeRun in browser, works in Chrome/FF on Windows, Mac an
 
 # How It Works
 
-Using PHP, it decodes the HDHomeRun's lineup.JSON file to return the channel listings/stream links and generate the channels UI. It is currently configured ot only show channels marked as Favorites on the HDHomeRun interface, to allow you to control which channels show.
+Using PHP, it decodes the HDHomeRun's lineup.JSON file to return the channel listings/stream links and generate the channels UI. It is currently configured to only show channels marked as Favorites on the HDHomeRun interface, to allow you to control which channels are visible.
 
 AJAX calls via jQuery return the device status (showing tuners available/in use), and get current listing info from MythWeb's listing interface. Tuner status updates every minute and can be run from the from the dropdown menu. Listing info updates every 5 minutes. Both the tuner status and the listing info refresh when opening a channel.
 
