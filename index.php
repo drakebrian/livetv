@@ -135,83 +135,83 @@ for ($i=0;$i<$len;$i++) {
 
 	 switch ($channelNum) {
 	 	case '8.1':
-	 		$img = 'img/cbs.png';
+	 		$img = 'img/networks/cbs.png';
 	 		$top = '#ededed';
 	 		$bottom = '#e4e4e4';
 	 	break;
 	 	case '8.2':
-	 		$img = 'img/bounce.png';
+	 		$img = 'img/networks/bounce.png';
 	 		$top = '#323232';
 	 		$bottom = '#060606';
 	 	break;
 	 	case '10.1':
-	 		$img = 'img/nbc.png';
+	 		$img = 'img/networks/nbc.png';
 	 		$top = '#555555';
 	 		$bottom = '#333333';
 	 	break;
 	 	case '10.2':
-	 		$img = 'img/me-tv.png';
+	 		$img = 'img/networks/me-tv.png';
 	 		$top = '#023541';
 	 		$bottom = '#001a21';
 	 	break;
 	 	case '10.3':
-	 		$img = 'img/antenna-tv.png';
+	 		$img = 'img/networks/antenna-tv.png';
 	 		$top = '#453f35';
 	 		$bottom = '#302b24';
 	 	break;
 	 	case '13.1':
-	 		$img = 'img/abc.png';
+	 		$img = 'img/networks/abc.png';
 	 		$top = '#ffffff';
 	 		$bottom = '#f2f2f2';
 	 	break;
 	 	case '13.2':
-	 		$img = 'img/cw.png';
+	 		$img = 'img/networks/cw.png';
 	 		$top = '#404040';
 	 		$bottom = '#292929';
 	 	break;
 	 	case '13.3':
-	 		$img = 'img/grit.png';
+	 		$img = 'img/networks/grit.png';
 	 		$top = '#2c3638';
 	 		$bottom = '#1c2124';
 	 	break;
 	 	case '21.1':
-	 		$img = 'img/pbs.png';
+	 		$img = 'img/networks/pbs.png';
 	 		$top = '#224761';
 	 		$bottom = '#182e3d';
 	 	break;
 	 	case '21.3':
-	 		$img = 'img/pbs-kids.png';
+	 		$img = 'img/networks/pbs-kids.png';
 	 		$top = '#00c3f7';
 	 		$bottom = '#0ab1dd';
 	 	break;
 	 	case '21.2':
-	 		$img = 'img/world.png';
+	 		$img = 'img/networks/world.png';
 	 		$top = '#fff';
 	 		$bottom = '#eee';
 	 	break;
 	 	
 	 	case '31.1':
-	 		$img = 'img/fox.png';
+	 		$img = 'img/networks/fox.png';
 	 		$top = '#090909';
 	 		$bottom = '#000';
 	 	break;
 	 	case '31.2':
-	 		$img = 'img/get-tv.png';
+	 		$img = 'img/networks/get-tv.png';
 	 		$top = '#fff';
 	 		$bottom = '#dadada';
 	 	break;
 	 	case '51.1':
-	 		$img = 'img/ion.png';
+	 		$img = 'img/networks/ion.png';
 	 		$top = '#68bcfc';
 	 		$bottom = '#1ca9f8';
 	 	break;
 	 	case '51.2':
-	 		$img = 'img/qubo.png';
+	 		$img = 'img/networks/qubo.png';
 	 		$top = '#a5d72a';
 	 		$bottom = '#90bc25';
 	 	break;
 	 	case '51.3':
-	 		$img = 'img/ion-life.png';
+	 		$img = 'img/networks/ion-life.png';
 	 		$top = '#659459';
 	 		$bottom = '#212b23';
 	 	break;
