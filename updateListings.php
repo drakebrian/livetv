@@ -4,8 +4,10 @@ if (isset($_POST['listings'])) {
 
 	require_once('php/simple_html_dom.php');
 
+	$mythWeb = $_SESSION['mythWeb'];
+
 	//Listings!!
-	$html = file_get_html('http://192.168.0.254/mythweb/tv/list');
+	$html = file_get_html($mythWeb.'/tv/list');
 	foreach($html->find('tr') as $row) {
 	    $item['channel'] = $row->find('td', 0)->plaintext;
 	    $item['listing'] = $row->find('td', 1)->plaintext;
