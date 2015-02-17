@@ -102,7 +102,7 @@ for ($i=0;$i<$len;$i++) {
 
 //Get Channels!!
 $json = '/lineup.json';
-$jsonFile = 'http://'.$hdhomerun.$json;
+$jsonFile = 'http://'.$deviceIP.$json;
 $decode = file_get_contents($jsonFile);
 
 $channels = json_decode($decode, true);

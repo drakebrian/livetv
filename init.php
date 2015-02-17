@@ -7,7 +7,8 @@ $command = escapeshellcmd($format);
 $output = trim(shell_exec($command));
 
 if (strpos($out,'no devices') !== false) {
-	echo 'No HDHomeRun detected';
+	$_SESSION['deviceID'] = 'No HDHomeRun detected';
+	$_SESSION['deviceIP'] = 'No HDHomeRun detected';
 } else {
 	//echo $output;
 	$deviceID = substr($output, 17, 8);
