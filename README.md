@@ -3,7 +3,7 @@ View live OTA tv via HDHomeRun in browser, works in Chrome/FF on Windows, Mac an
 
 # Requirements
 * HDHomeRun Device - developed using HDHomeRun PLUS (HDTC-2US), requires transcoding
-* _libhdhomerun_ - available from [Silicon Dust](http://www.silicondust.com/support/downloads/)
+* _libhdhomerun_ - available from [Silicon Dust](http://www.silicondust.com/support/downloads/) - installs hdhomerun_config, required
 * *AMP server - Apache and PHP are required, MySQL is required for MythTV
 * MythTV, MythWeb (_optional_) - Required for listing info (MythTV Backend + MythWeb minimum)
 * VLC Plugin - included with [VLC](http://videolan.org) on Windows and Linux, no current Mac version
