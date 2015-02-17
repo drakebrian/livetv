@@ -4,7 +4,7 @@
 ?>
 <html>
 <head>
-	<title>Live TV - 10 Florida</title>
+	<title>Live TV</title>
 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 

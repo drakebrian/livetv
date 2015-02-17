@@ -1,5 +1,5 @@
 # livetv
-View live OTA tv in browser from HDHomeRun, works in Chrome/FF on Windows, Mac and Linux.
+View live OTA tv via HDHomeRun in browser, works in Chrome/FF on Windows, Mac and Linux.
 
 # Requirements
 * HDHomeRun Device - developed using HDHomeRun PLUS (HDTC-2US), requires transcoding
