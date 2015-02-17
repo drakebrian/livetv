@@ -30,8 +30,6 @@ if (isset($_POST['tuner'])) {
 		
 	}
 	
-
-
 } else {
 	echo 'No direct access.';
 }

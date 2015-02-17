@@ -6,6 +6,9 @@
 
 	$deviceIP = $_SESSION['deviceIP'];
 	$deviceID = $_SESSION['deviceID'];
+
+	//Define MythWeb server
+	$mythWeb = 'http://192.168.0.254/mythweb';
 ?>
 <html>
 <head>
@@ -59,7 +62,7 @@
 require_once('php/simple_html_dom.php');
 
 //Listings!!
-$html = file_get_html('http://192.168.0.254/mythweb/tv/list');
+$html = file_get_html($mythWeb.'/tv/list');
 foreach($html->find('tr') as $row) {
     $item['channel'] = $row->find('td', 0)->plaintext;
     $item['listing'] = $row->find('td', 1)->plaintext;
