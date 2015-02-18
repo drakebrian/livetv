@@ -23,7 +23,7 @@ Clone directory to web server. Requires editing of MythWeb server location in th
 
 ### Channel logos and colors
 
-Currently working on a way to add custom logos and background colors to channels that are not auto-detected after running the results against the FCC's API.a
+Currently working on a way to add custom logos and background colors to channels that are not auto-detected after running the results against the FCC's API.
 
 # What's Next
 
