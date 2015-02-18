@@ -1,0 +1,10 @@
+8.2,bounce.png,#323232,#060606
+10.2,me-tv.png,#023541,#001a21
+10.3,antenna-tv.png,#453f35,#302b24
+13.2,cw.png,#404040,#292929
+21.2,world.png,#fff,#eee
+21.3,pbs-kids.png,#00c3f7,#0ab1dd
+31.2,get-tv.png,#fff,#dadada
+51.1,ion.png,#68bcfc,#1ca9f8
+51.2,qubo.png,#a5d72a,#90bc25
+51.3,ion-life.png,#659459,#212b23

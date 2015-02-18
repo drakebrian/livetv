@@ -11,7 +11,6 @@
 	$deviceIP = $_SESSION['deviceIP'];
 	$deviceID = $_SESSION['deviceID'];
 
-
 ?>
 <html>
 <head>
@@ -66,12 +65,8 @@
 $json = '/lineup.json';
 $jsonFile = 'http://'.$deviceIP.$json;
 $decode = file_get_contents($jsonFile);
-
 $channels = json_decode($decode, true);
-
 $len = count($channels);
-
-
 
 for ($i=0;$i<$len;$i++) {
 	 $channelData = (array) $channels[$i];
@@ -95,96 +90,59 @@ for ($i=0;$i<$len;$i++) {
 
 	    }
 	}
+	$subChannel = substr($channelNum, strpos($channelNum, '.') + 1);
+	$channelCore = substr($channelNum, 0, strpos($channelNum, '.'));
+
+	
+
+	if ($subChannel == 1) {
+		$channelClean = substr($channelName, 0, strpos($channelName, '-'));
+		if (strlen($channelClean) == 4) {
+			//see if channel follows east/west coast formatting
+			//if ((substr($channelClean, 0, 1) == 'W') || (substr($channelClean, 0, 1) == 'K')) {
+				$affiliateTemp = getAffiliate($channelClean);
+				$affiliate = $affiliateTemp[1];
+				$img = $affiliateTemp[7];
+			//} else {
+				//not standard format
+			//}
+		} else {
+			//not 4 character callsign, try after hyphen
+			$affiliate = ''; 
+			$img = 'http://placehold.it/250x250';
+
+		}
+
+	} else {
+		$affiliate = ''; 
+		$img = 'http://placehold.it/255x255';
+	}
 
 
 	 $top = '#888';
 	 $bottom = '#555';
 
-	 switch ($channelNum) {
-	 	case '8.1':
-	 		$img = 'img/networks/cbs.png';
+	 switch ($affiliate) {
+	 	case 'CBS':
 	 		$top = '#ededed';
 	 		$bottom = '#e4e4e4';
 	 	break;
-	 	case '8.2':
-	 		$img = 'img/networks/bounce.png';
-	 		$top = '#323232';
-	 		$bottom = '#060606';
-	 	break;
-	 	case '10.1':
-	 		$img = 'img/networks/nbc.png';
+	 	case 'NBC':
 	 		$top = '#555555';
 	 		$bottom = '#333333';
 	 	break;
-	 	case '10.2':
-	 		$img = 'img/networks/me-tv.png';
-	 		$top = '#023541';
-	 		$bottom = '#001a21';
-	 	break;
-	 	case '10.3':
-	 		$img = 'img/networks/antenna-tv.png';
-	 		$top = '#453f35';
-	 		$bottom = '#302b24';
-	 	break;
-	 	case '13.1':
-	 		$img = 'img/networks/abc.png';
+	 	case 'ABC':
 	 		$top = '#ffffff';
 	 		$bottom = '#f2f2f2';
 	 	break;
-	 	case '13.2':
-	 		$img = 'img/networks/cw.png';
-	 		$top = '#404040';
-	 		$bottom = '#292929';
-	 	break;
-	 	case '13.3':
-	 		$img = 'img/networks/grit.png';
-	 		$top = '#2c3638';
-	 		$bottom = '#1c2124';
-	 	break;
-	 	case '21.1':
-	 		$img = 'img/networks/pbs.png';
+	 	case 'PBS':
 	 		$top = '#224761';
 	 		$bottom = '#182e3d';
 	 	break;
-	 	case '21.3':
-	 		$img = 'img/networks/pbs-kids.png';
-	 		$top = '#00c3f7';
-	 		$bottom = '#0ab1dd';
-	 	break;
-	 	case '21.2':
-	 		$img = 'img/networks/world.png';
-	 		$top = '#fff';
-	 		$bottom = '#eee';
-	 	break;
-	 	
-	 	case '31.1':
-	 		$img = 'img/networks/fox.png';
+	 	case 'FOX':
 	 		$top = '#090909';
 	 		$bottom = '#000';
 	 	break;
-	 	case '31.2':
-	 		$img = 'img/networks/get-tv.png';
-	 		$top = '#fff';
-	 		$bottom = '#dadada';
-	 	break;
-	 	case '51.1':
-	 		$img = 'img/networks/ion.png';
-	 		$top = '#68bcfc';
-	 		$bottom = '#1ca9f8';
-	 	break;
-	 	case '51.2':
-	 		$img = 'img/networks/qubo.png';
-	 		$top = '#a5d72a';
-	 		$bottom = '#90bc25';
-	 	break;
-	 	case '51.3':
-	 		$img = 'img/networks/ion-life.png';
-	 		$top = '#659459';
-	 		$bottom = '#212b23';
-	 	break;
-
-	 	default:
-	 		$img = 'http://placehold.it/148x148';
 	 }
 
 	 if ($channelFav == 1) {

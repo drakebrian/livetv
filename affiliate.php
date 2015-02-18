@@ -2,12 +2,12 @@
 
 //if (isset($_POST['callsign'])) {
 
-	$callsign = 'WUHF'; //$_POST['callsign'];
+	$callsign = 'WROC'; //$_POST['callsign'];
 	$queryURL = 'http://data.fcc.gov/mediabureau/v01/tv/facility/search/';
 	$fileType = 'json';
 	$file = $queryURL.$callsign.'.'.$fileType;
 
-	$imgFolder = 'img/affiliates/';
+	$imgFolder = 'img/networks/';
 	$imgType = 'png';
 	$unknown = 'nomatch';
 
@@ -20,6 +20,7 @@
 
 	  $call = $stationData[0]['facilityList'][0]['callSign'];
 	  $network = $stationData[0]['facilityList'][0]['networkAfil'];
+	  $networkLower = strtolower($stationData[0]['facilityList'][0]['networkAfil']);
 	  $fccId = $stationData[0]['facilityList'][0]['id'];
 
 	  $rfChan = $stationData[0]['facilityList'][0]['rfChannel'];
@@ -29,10 +30,10 @@
 	  $state = $stationData[0]['facilityList'][0]['communityState'];
 
 	  
-
+	  $affilImg = $imgFolder.$networkLower.'.'.$imgType;
 	  //Check if Affiliate Img is available
 	  	if (file_exists($affilImg)) {
-			$affilImg = $imgFolder.$network.'.'.$imgType;
+			//use that img
 		} else {
 		    $affilImg = $imgFolder.$unknown.'.'.$imgType;
 		}
@@ -41,9 +42,11 @@
 	  $resultArray = array($call, $network, $fccId, $rfChan, $vChan, $city, $state, $affilImg);
 
 	}
+	return $resultArray;
 
+	//echo $resultArray[1];
 	//return $resultArray;
-	print_r($resultArray);
+	//print_r($resultArray);
 
 //} else {}
 

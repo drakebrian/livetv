@@ -17,13 +17,19 @@ AJAX calls via jQuery return the device status (showing tuners available/in use)
 
 Video streams are provided by the HDHomeRun and can be configured through it's web interface under 'Transcode Configuration'. Internet540 is best for Wifi devices, Heavy works fine on LAN. Video is not routed through the Apache server but direct from device to client for best performance.
 
-# Project Status
+# Configuration
 
-Requires editing of MythWeb server location in the index.php file. All channel network info is hardcoded at the moment, but included is a script to return network affliates from the FCC's open API. This is at the top of development priorities, as it will apply to a much larger audience.
+Clone directory to web server. Requires editing of MythWeb server location in the index.php file. 
+
+## Channel logos and colors
+
+Currently working on a way to add custom logos and background colors to channels that are not auto-detected after running the results against the FCC's API.
 
 # What's Next
 
-* Return network affiliates from FCC database and populate channel icons accordingly
+* Allow override/custom channel icons & colors
+* Allow lisitings to be disabled, removing the requirement for MythWeb
 * Add fullscreen button to UI (VLC plugin has built-in)
 * Grab detailed listing info for current playing show
 * Update listing at end-of-show (currently every 5 minutes)
+* Add more channel logos to project, optimize size of pngs
