@@ -3,8 +3,8 @@ View live OTA tv via HDHomeRun in browser, works in Chrome/FF on Windows, Mac an
 
 # Requirements
 * HDHomeRun Device - developed using HDHomeRun PLUS (HDTC-2US), requires transcoding
-* _libhdhomerun_ - available from [Silicon Dust](http://www.silicondust.com/support/downloads/) - installs hdhomerun_config, required
-* *AMP server - Apache and PHP are required, MySQL is required for MythTV
+* _hdhomerun_config_ - available from [Silicon Dust](http://www.silicondust.com/support/downloads/), part of libhdhomerun
+* *AMP server - Apache and PHP5 are required, MySQL is required for MythTV
 * MythTV, MythWeb (_optional_) - Required for listing info (MythTV Backend + MythWeb minimum)
 * VLC Plugin - included with [VLC](http://videolan.org) on Windows and Linux, no current Mac version
 * WebChimera (_Mac only_) - VLC based plugin for Mac via [RSATom](https://github.com/RSATom/WebChimera)
@@ -21,9 +21,9 @@ Video streams are provided by the HDHomeRun and can be configured through it's w
 
 Clone directory to web server. Requires editing of MythWeb server location in the index.php file. 
 
-## Channel logos and colors
+### Channel logos and colors
 
-Currently working on a way to add custom logos and background colors to channels that are not auto-detected after running the results against the FCC's API.
+Currently working on a way to add custom logos and background colors to channels that are not auto-detected after running the results against the FCC's API.a
 
 # What's Next
 
