@@ -122,8 +122,8 @@ for ($i=0;$i<$len;$i++) {
 	}
 
 
-	 $top = '#888';
-	 $bottom = '#555';
+	 $top = '#bbb';
+	 $bottom = '#888';
 
 	 switch ($affiliate) {
 	 	case 'CBS':
