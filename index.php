@@ -109,13 +109,13 @@ for ($i=0;$i<$len;$i++) {
 		} else {
 			//not 4 character callsign, try after hyphen
 			$affiliate = ''; 
-			$img = 'http://placehold.it/250x250';
+			$img = 'img/networks/unknown.png';
 
 		}
 
 	} else {
 		$affiliate = ''; 
-		$img = 'http://placehold.it/255x255';
+		$img = 'img/networks/unknown.png';
 	}
 
 
