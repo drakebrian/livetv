@@ -14,7 +14,7 @@ View live OTA tv via HDHomeRun in browser, works in Chrome/FF on Windows, Mac an
 
 # How It Works
 
-Using PHP, it finds HDHomeRun devices on the local network, decodes the lineup.JSON file to return the channel listings/stream links and generate the channels UI. It is currently configured to only show channels marked as Favorites on the HDHomeRun interface, to allow you to control which channels are visible.
+Using hdhomerun_config via PHP's <pre>shell_exec</pre> function, it finds HDHomeRun devices on the local network, decodes the lineup.JSON file to return the channel listings/stream links and generate the channels UI. It is currently configured to only show channels marked as Favorites on the HDHomeRun interface, to allow you to control which channels are visible.
 
 AJAX calls via jQuery return the device status (showing tuners available/in use), and get current listing info from MythWeb's listing interface. Tuner status updates every minute and can be run from the from the dropdown menu. Listing info updates every 5 minutes. Both the tuner status and the listing info refresh when opening a channel.
 
@@ -26,7 +26,7 @@ Clone directory to web server. Requires editing of MythWeb server location in th
 
 ### Channel guide listing 
 
-Listing info is retrieved from [MythWeb's](http://www.mythtv.org/wiki/MythWeb) listing interface. If you don't have a MythWeb install to retrieve listing info, set the $mythInstalled variable in the _index.php_ to false. 
+Listing info is retrieved from [MythWeb's](http://www.mythtv.org/wiki/MythWeb) listing interface. If you don't have a MythWeb install to retrieve listing info, set the $mythInstalled variable in the _index.php_ to <pre>false</pre>. 
 
 ### Channel logos and colors
 
