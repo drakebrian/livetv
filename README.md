@@ -35,6 +35,7 @@ Currently working on a way to add custom logos and background colors to channels
 # What's Next
 
 * Allow override/custom channel icons & colors
+* Retrieve tuner count from HDHomeRun (currently hardcoded in AJAX calls)
 * Add fullscreen button to UI (VLC plugin has built-in)
 * Grab detailed listing info for current playing show
 * Update listing at end-of-show (currently every 5 minutes)
