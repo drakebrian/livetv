@@ -2,9 +2,12 @@
 <?php
 	session_start();
 
-	//Define MythWeb server
+	//Define MythWeb server, set to false to disable listings
+	$mythInstalled = true;
 	$mythWeb = 'http://192.168.0.254/mythweb';
+	$_SESSION['mythInstalled'] = $mythInstalled;
 	$_SESSION['mythWeb'] = $mythWeb;
+
 
 	require_once('init.php');
 
@@ -145,18 +148,21 @@ for ($i=0;$i<$len;$i++) {
 	 	break;
 	 }
 
+
 	 if ($channelFav == 1) {
 	 	echo '<div id="'.$channelNum.'" class="channel" data-url="'.$channelUrl.'" style="background: linear-gradient('.$top.', '.$bottom.')">';
-	 	echo '<div class="tv-guide">';
+	 	if ($mythInstalled == true) {
+	 		echo '<div class="tv-guide">';
 	 		echo '<div class="allow-scroll">';
 		 		echo '<h4>'.$list.'</h4>';
 		 	echo '</div>';
-	 	if ($hd == true) {
-	 		echo '<div class="bottom-fade"><img class="hd" src="img/hd.png"></div>';
-	 	} else {
-	 		echo '<div class="bottom-fade"></div>';
-	 	}
-	 	echo '</div>';	
+		 	if ($hd == true) {
+		 		echo '<div class="bottom-fade"><img class="hd" src="img/hd.png"></div>';
+		 	} else {
+		 		echo '<div class="bottom-fade"></div>';
+		 	}
+		 	echo '</div>';
+	 	} else {}
 	 	echo '<img class="channel-icon" src="'.$img.'" />';
 	 	echo '<div class="channel-info">';
 	 	echo $channelNum.' &nbsp;'.$channelName;

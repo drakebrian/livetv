@@ -24,6 +24,10 @@ Video streams are provided by the HDHomeRun and can be configured through it's w
 
 Clone directory to web server. Requires editing of MythWeb server location in the index.php file. 
 
+### Channel guide listing 
+
+Listing info is retrieved from [MythWeb's](http://www.mythtv.org/wiki/MythWeb) listing interface. If you don't have a MythWeb install to retrieve listing info, set the $mythInstalled variable in the _index.php_ to false. 
+
 ### Channel logos and colors
 
 Currently working on a way to add custom logos and background colors to channels that are not auto-detected after running the results against the FCC's API.
@@ -31,7 +35,6 @@ Currently working on a way to add custom logos and background colors to channels
 # What's Next
 
 * Allow override/custom channel icons & colors
-* Allow lisitings to be disabled, removing the requirement for MythWeb
 * Add fullscreen button to UI (VLC plugin has built-in)
 * Grab detailed listing info for current playing show
 * Update listing at end-of-show (currently every 5 minutes)
