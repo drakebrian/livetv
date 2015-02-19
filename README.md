@@ -26,7 +26,7 @@ Clone directory to web server. Requires editing of MythWeb server location in th
 
 ### Channel guide listing 
 
-Listing info is retrieved from [MythWeb's](http://www.mythtv.org/wiki/MythWeb) listing interface. If you don't have a MythWeb install to retrieve listing info, set the $mythInstalled variable in the _index.php_ to `false`. 
+Listing info is retrieved from [MythWeb's](http://www.mythtv.org/wiki/MythWeb) listing interface. If you don't have a MythWeb install to retrieve listing info, set the `$mythInstalled` variable in the _index.php_ to `false`. 
 
 ### Channel logos and colors
 
