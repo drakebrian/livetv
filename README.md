@@ -40,3 +40,4 @@ Currently working on a way to add custom logos and background colors to channels
 * Grab detailed listing info for current playing show
 * Update listing at end-of-show (currently every 5 minutes)
 * Add more channel logos to project, optimize size of pngs
+
