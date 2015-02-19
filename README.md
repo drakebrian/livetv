@@ -1,8 +1,8 @@
 # livetv
 View live OTA tv via HDHomeRun in browser, works in Chrome/FF on Windows, Mac and Linux.
 
-<img src="http://dev.counttozero.com/img/listingexample.png" alt="Channels and listing example" />
-<img src="http://dev.counttozero.com/img/viewingexample.png" alt="Channel viewer example" />
+<img src="http://dev.counttozero.com/img/listingexample2.png" alt="Channels and listing example" />
+<img src="http://dev.counttozero.com/img/viewingexample2.png" alt="Channel viewer example" />
 
 # Requirements
 * HDHomeRun Device - developed using HDHomeRun PLUS (HDTC-2US), requires transcoding
