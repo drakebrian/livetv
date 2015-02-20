@@ -3,7 +3,7 @@
 	session_start();
 
 	//Define MythWeb server, set to false to disable listings
-	$mythInstalled = true;
+	$mythInstalled = false;
 	$mythWeb = 'http://192.168.0.254/mythweb';
 	$_SESSION['mythInstalled'] = $mythInstalled;
 	$_SESSION['mythWeb'] = $mythWeb;
@@ -45,8 +45,8 @@
 
 <div class="hdhomerun-menu">
 	<ul>
-		<li>HDHomeRun <span>ID: <?php echo $deviceID ?></span></li>
-		<li><?php echo $deviceIP ?><a href="http://<?php echo $deviceIP ?>" target="_blank"><span>Manage</span></a></li>
+		<li>HDHomeRun <span id="hdhomerun-deviceid">ID: <?php echo $deviceID ?></span></li>
+		<li><?php echo $deviceIP ?><a id="manage-hdhomerun" href="http://<?php echo $deviceIP ?>" target="_blank"><span>Manage</span></a></li>
 		<li id="refresh-tuner">Refresh Tuner Status</li>
 		<!--<li>Restart HDHomeRun...</li>-->
 	</ul>
@@ -228,6 +228,14 @@ $(document).ready(function() {
     $('.hdhomerun-menu').click(function() {
     	$('.hdhomerun-menu').slideUp();
     });
+
+    if ($('#hdhomerun-deviceid').html() == 'ID: No HDHomeRun detected') {
+    	$('#hdhomerun-deviceid').parent('li').remove();
+    	$('#manage-hdhomerun span').html('Help');
+    	$('#manage-hdhomerun').attr('href', 'http://www.silicondust.com/support/instructions/troubleshooting/');
+    } else {
+
+    }
 
 
 

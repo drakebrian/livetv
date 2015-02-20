@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+//session_start();
 
 $mythInstalled = $_SESSION['mythInstalled'];
 $mythWeb = $_SESSION['mythWeb'];
@@ -11,7 +11,7 @@ $format = 'hdhomerun_config discover';
 $command = escapeshellcmd($format);
 $output = trim(shell_exec($command));
 
-if (strpos($out,'no devices') !== false) {
+if (strpos($output,'no devices') !== false) {
 	$_SESSION['deviceID'] = 'No HDHomeRun detected';
 	$_SESSION['deviceIP'] = 'No HDHomeRun detected';
 } else {
